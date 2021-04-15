@@ -1,10 +1,11 @@
-import 'package:date_picker_timeline/date_picker_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/rounded_picker.dart';
 import 'package:new_car_tl/constants/app_font_style.dart';
 import 'package:new_car_tl/constants/colors.dart';
 import 'package:new_car_tl/constants/dimen.dart';
 import 'package:new_car_tl/constants/strings.dart';
+import 'package:new_car_tl/ui/widgets/Calendar.dart';
 import 'package:new_car_tl/ui/widgets/fund_transfer_widget.dart';
 
 class FundTransferPage extends StatefulWidget {
@@ -14,7 +15,6 @@ class FundTransferPage extends StatefulWidget {
 
 class _FundTransferPageState extends State<FundTransferPage> {
 
-  DatePickerController _controller = DatePickerController();
   TextEditingController _searchController = TextEditingController();
   DateTime _selectedValue = DateTime.now();
 
@@ -48,28 +48,7 @@ class _FundTransferPageState extends State<FundTransferPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
-          Container(
-          child: DatePicker(
-          DateTime.now(),
-          width: 60,
-          height: 80,
-          controller: _controller,
-          initialSelectedDate: DateTime.now(),
-          selectionColor: PRIMARY_COLOR,
-          selectedTextColor: Colors.white,
-          inactiveDates: [
-            DateTime.now().add(Duration(days: 3)),
-            DateTime.now().add(Duration(days: 4)),
-            DateTime.now().add(Duration(days: 7))
-          ],
-          onDateChange: (date) {
-            // New date selected
-            setState(() {
-              _selectedValue = date;
-            });
-          },
-      ),
-          ),
+          MyCalendar(),
               SizedBox(height: LINE_HEIGHT,),
               Padding(
                 padding: const EdgeInsets.all(8.0),

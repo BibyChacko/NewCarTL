@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:new_car_tl/constants/strings.dart';
 import 'package:new_car_tl/ui/pages/confirmed_case_page.dart';
-import 'file:///D:/FlutterProjects/new_car_tl/lib/ui/pages/home_page.dart';
+
 import 'package:new_car_tl/ui/pages/enquiries_page.dart';
 import 'package:new_car_tl/ui/pages/evaluator_page.dart';
 import 'package:new_car_tl/ui/pages/fund_transfer_page.dart';
+import 'package:new_car_tl/ui/pages/home_page.dart';
 import 'package:new_car_tl/ui/pages/junk_leads_page.dart';
 import 'package:new_car_tl/ui/pages/pending_case_page.dart';
 import 'package:new_car_tl/ui/pages/rates_offered_page.dart';
